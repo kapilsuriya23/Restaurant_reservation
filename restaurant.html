@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>Restaurant Reservation</title>
+        <link rel="stylesheet" href="Restaurant.css"></link>
+    </head>
+    <body>
+        <img class="bg" src="pexels-life-of-pix-67468.jpg">
+        <h1>Welcome To Our Restaurant</h1>
+
+        <div class="container">
+           <label class="label" id="name">Customer Name : </label>
+           <input class="inputs" id="inputname" type="text" placeholder="Enter your Name" ><br><br>
+           <label class="label" id="people">Number of People: </label>
+           <input class="inputs" id="inputpeople" type="number"><br><br>
+           <label class="label" id="date">Reservation Date: </label>
+           <input class="inputs" id="inputdate" type="date"><br><br>
+           <label class="label" id="time">Reservation Time: </label>
+           <select class="inputs" id="inputtime">
+            <option>Breakfast</option>
+            <option>Lunch</option>
+            <option>Dinner</option>
+           </select>
+        </div>
+
+        <button onclick="booking()" id="button" class="button">BOOK</button>
+        <script>
+            var inputname=document.getElementById("inputname");
+            var inputdate=document.getElementById("inputdate");
+            var inputpeople=document.getElementById("inputpeople");
+            var inputtime=document.getElementById("inputtime");
+
+            function booking(){
+                if(inputname.value == ""){
+                alert("Enter name!!");
+                }
+                if(inputpeople.value == ""){
+                alert("Enter no.of.peoples!!");
+                }
+                if(inputdate.value == ""){
+                alert("Enter Date!!");
+                }
+                else{
+                    alert(`Enjoy your ${inputtime.value}`);
+                }
+            }
+            
+
+        </script>
+    </body>
+</html>
